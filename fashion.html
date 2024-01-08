@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600&family=Abril+Fatface&family=Archivo:wght@600;700&family=Cabin:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Gabarito:wght@400;500;600;700;800;900&family=Hind:wght@300;400&family=Lato:wght@300;400;700&family=Libre+Franklin:wght@700&family=Montserrat:ital,wght@0,600;0,800;0,900;1,500&family=Mulish:wght@400;500;600;700;800;900;1000&family=Noto+Sans:wght@400;500;600;700;800&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,500;6..12,600;6..12,700;6..12,800&family=Onest:wght@200;300;400;500;600;700&family=Playfair+Display:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Quicksand:wght@500;600&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+    * {
+      margin: 0%;
+      padding: 0%;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .logo-container {
+      display: flex;
+      flex-direction: row;
+      height: 70px;
+      margin: auto;
+      width: 88%;
+      justify-content: space-between;
+    }
+
+    .logo-text {
+      font-family: 'Mulish', sans-serif;
+      font-size: 24px;
+      font-weight: 900;
+      padding-top: 18px;
+    }
+
+    .search-container {
+      width: 350px;
+      height: 30px;
+      background-color: rgb(246, 246, 246);
+      position: relative;
+      margin-top: 20px;
+    }
+
+    .search-list {
+      position: absolute;
+      top: 5px;
+    }
+
+    select {
+      background-color: transparent;
+      border: none;
+      font-size: small;
+      color: rgb(175, 175, 175);
+      padding-left: 12px;
+    }
+
+    .l-sign {
+      color: rgb(175, 175, 175);
+      position: absolute;
+      left: 35%;
+      font-size: 23px;
+    }
+
+    .search {
+      position: absolute;
+      left: 40%;
+      top: 5px;
+    }
+
+    .sof {
+      background-color: transparent;
+      border: none;
+      font-size: 12px;
+      color: rgb(185, 185, 185);
+    }
+
+    .s-icon {
+      position: absolute;
+      right: 10px;
+      top: 2px;
+    }
+
+    .menu-icon {
+      margin-top: 12px;
+      width: 60px;
+      height: 25px;
+    }
+
+    .navigation-container {
+      max-width: 100%;
+      height: 50px;
+      background-color: black;
+    }
+
+    .nav-container {
+      display: flex;
+      width: 92%;
+      height: 50px;
+      margin: auto;
+      position: relative;
+    }
+
+    .browse-container {
+      display: flex;
+      color: white;
+      position: relative;
+      font-size: 13px;
+    }
+
+    .browse-text {
+      margin-top: 15px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #br-drop {
+      color: white;
+      margin-top: 3px;
+    }
+
+    .browse-list {
+      display: flex;
+      justify-content: space-evenly;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      height: 60px;
+      width: 500px;
+    }
+
+    .br-li-one {
+      width: 100px;
+      color: white;
+      font-weight: 500;
+      font-size: 13px;
+      text-align: left;
+      height: 30px;
+      margin-top: 15px;
+    }
+
+    .browse-end {
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      margin-left: 180px;
+      display: flex;
+    }
+
+    .three-icon {
+      margin-top: 5px;
+      margin-left: 25px;
+    }
+
+    .container-one {
+      max-width: 100%;
+      display: flex;
+    }
+
+    .ver-fo {
+      font-size: 13px;
+      word-spacing: 30px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    .ver-tex {
+      transform: rotate(180deg);
+      writing-mode: vertical-rl;
+      width: 30px;
+      height: 300px;
+      margin-left: 60px;
+    }
+
+    .verti {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .scroll {
+      transform: rotate(180deg);
+      writing-mode: vertical-rl;
+      width: 30px;
+      height: 80px;
+      margin-left: 60px;
+      margin-top: 90px;
+    }
+
+    .d-arrow {
+      margin-left: 60px;
+      margin-top: 30px;
+    }
+
+    .container-one-left {
+      display: flex;
+      position: relative;
+      width: 40%;
+      height: 530px;
+      background-color: rgb(246, 246, 246);
+    }
+
+    .horizontal-container-one {
+      width: 480px;
+      height: 250px;
+      position: absolute;
+      top: 120px;
+      left: 120px;
+      background-color: rgb(237, 237, 237);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+
+    }
+
+    .winter {
+      margin-top: 20px;
+      margin-left: 25px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .wint {
+      margin-left: 25px;
+      margin-top: 5px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .dof {
+      margin-left: 17px;
+      margin-top: 16px;
+    }
+
+    .all-collection {
+      background-color: black;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      border-radius: 6px;
+      width: 130px;
+      text-align: center;
+      margin-left: 25px;
+      margin-top: 23px;
+      height: 30px;
+    }
+
+    .container-one-right {
+      position: relative;
+      width: 60%;
+      height: 530px;
+    }
+
+    .gb-pic {
+      position: absolute;
+      left: 50px;
+      width: 90%
+    }
+
+    .container-two {
+      max-width: 90%;
+      margin: auto;
+      height: 460px;
+      display: flex;
+      margin-top: 70px;
+      justify-content: space-around;
+
+    }
+
+    .container-three {
+      margin-top: 50px;
+      max-width: 90%;
+      margin: auto;
+      height: 1000px;
+    }
+
+    .seven-button-container {
+      max-width: 85%;
+      margin: auto;
+      height: 80px;
+      display: flex;
+      font-family: 'Poppins', sans-serif;
+      justify-content: space-around;
+      align-items: center;
+
+    }
+
+    .best-sell {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 500;
+      font-family: 'Poppins', sans-serif;
+      text-decoration: 1px underline;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .all-button {
+      border-radius: 10px;
+      height: 40px;
+      width: 80px;
+      background-color: black;
+      text-align: center;
+      padding: 8px;
+    }
+
+    .casual-button {
+      border-radius: 10px;
+      height: 40px;
+      width: 150px;
+      border: 2px solid black;
+      text-align: center;
+      padding: 8px;
+    }
+
+    .formal-button {
+      border-radius: 10px;
+      height: 40px;
+      width: 150px;
+      border: 2px solid black;
+      text-align: center;
+      padding: 8px;
+    }
+
+    .shirt-button {
+      border-radius: 10px;
+      height: 40px;
+      width: 120px;
+      border: 2px solid black;
+      text-align: center;
+      padding: 8px;
+    }
+
+    .hoddi-button {
+      border-radius: 10px;
+      height: 40px;
+      width: 100px;
+      border: 2px solid black;
+      text-align: center;
+      padding: 8px;
+    }
+
+    .linde-button {
+      border-radius: 10px;
+      height: 40px;
+      width: 130px;
+      border: 2px solid black;
+      text-align: center;
+      padding: 8px;
+    }
+
+    .pant-button {
+      border-radius: 10px;
+      height: 40px;
+      width: 100px;
+      border: 2px solid black;
+      text-align: center;
+      padding: 8px;
+    }
+
+    .dress-container {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      margin: auto;
+      height: 1000px;
+      justify-content: space-between;
+    }
+
+    .dress-container-top {
+      display: flex;
+      max-width: 100%;
+      margin: auto;
+      gap: 20px;
+    }
+
+    .dress-container-bottom {
+      display: flex;
+      max-width: 100%;
+      margin: auto;
+      gap: 20px;
+    }
+
+    .bjeans {
+      text-align: center;
+      font-weight: 600;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .cash {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+    .load-more {
+      text-align: center;
+      width: 150px;
+      height: 40px;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 8px;
+      margin-top: 40px;
+      margin: auto;
+      font-weight: 500;
+    }
+
+    .third-line {
+      width: 90%;
+      margin: auto;
+      margin-top: 180px;
+      border-top: 1px solid rgb(119, 119, 119);
+    }
+
+    .container-four {
+      max-width: 100%;
+      height: 750px;
+    }
+
+    .cofo-inner {
+      margin: auto;
+      width: 90%;
+      height: 220px;
+      display: flex;
+      margin-top: 80px;
+      justify-content: space-around;
+    }
+
+    .cofo {
+      width: 170px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 140px;
+      margin: auto;
+    }
+
+    .cofo-text {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    .inner-top-text {
+      width: 200px;
+      height: 40px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .enjoy {
+      font-size: 11px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+    }
+
+    .cont-four-one {
+      width: 90%;
+      height: 480px;
+      margin: auto;
+      margin-top: 80px;
+      display: flex;
+    }
+
+    .cont-four-right {
+      display: flex;
+      font-family: 'Poppins', sans-serif;
+      flex-direction: column;
+      width: 600px;
+      height: 480px;
+      background-color: rgb(243, 240, 240);
+      position: relative;
+    }
+
+    .sale-event {
+      position: absolute;
+      top: 100px;
+      left: 250px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .winter-pdt {
+      position: absolute;
+      font-size: 38px;
+      font-weight: 600;
+      top: 130px;
+      left: 160px;
+    }
+
+    .limited-offer {
+      position: absolute;
+      font-size: 38px;
+      font-weight: 600;
+      top: 180px;
+      left: 140px;
+    }
+
+    .until {
+      position: absolute;
+      top: 240px;
+      left: 130px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .shop-now {
+      width: 150px;
+      height: 50px;
+      text-align: center;
+      color: white;
+      background-color: black;
+      font-weight: 500;
+      font-size: 14px;
+      border-radius: 8px;
+      position: absolute;
+      left: 235px;
+      top: 300px;
+    }
+
+    .container-five {
+      position: relative;
+      width: 100%;
+      height: 850px;
+      margin-top: 160px;
+    }
+
+    .container-five-one {
+      width: 90%;
+      margin: auto;
+      height: 250px;
+
+    }
+
+    .cus-rev {
+      text-align: center;
+      font-size: 38px;
+      font-weight: 550;
+      text-decoration: 1px underline;
+    }
+
+    .as-wom {
+      text-align: center;
+      font-style: italic;
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+
+    .up-sle {
+      text-align: center;
+      font-style: italic;
+      font-size: 16px;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    .alisha {
+      text-align: center;
+      font-weight: 600;
+      font-size: 18px;
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    .more {
+      position: absolute;
+      left: 47%;
+      top: 150px;
+    }
+
+    .ig-sep {
+      text-align: center;
+      font-size: 38px;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+
+    .cont-five-inner {
+      width: 90%;
+      margin: auto;
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .container-five-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .container-five-right-top {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+
+    .container-five-right-bottom {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+
+    .container-six {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      height: 400px;
+      background-color: black;
+      margin-top: 60px;
+      color: white;
+    }
+
+    .container-six-top {
+      width: 90%;
+      margin: auto;
+      height: 300px;
+      display: flex;
+    }
+
+    .container-sixtop-right {
+      height: 300px;
+      width: 880px;
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+    }
+
+    .sixtop-right-one {
+      width: 210px;
+      height: 300px;
+      padding-left: 30px;
+    }
+
+    .container-sixtop-left {
+      height: 300px;
+      width: 300px;
+    }
+
+    .about-shop {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 60px;
+    }
+
+    .lorem {
+      font-size: 14px;
+      margin-top: 20px;
+      font-weight: 500;
+    }
+
+    .elit {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .uxper {
+      font-size: 14px;
+      margin-top: 20px;
+      font-weight: 500;
+    }
+
+    .uxper-num {
+      font-size: 14px;
+      margin-top: 20px;
+      font-weight: 500;
+    }
+
+    .container-six-bottom {
+      width: 90%;
+      margin: auto;
+      height: 150px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    li {
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 32px;
+    }
+
+    .final {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="container">
+
+    <div class="logo-container">
+      <div class="logo-text">
+        <p>Gonzimart</p>
+      </div>
+      <div class="search-container">
+        <div class="search-list">
+          <select id="category">
+            <option value="category">All Categories</option>
+            <option value="Gents">Gents</option>
+            <option value="Women">Women</option>
+            <option value="Kids">Kids</option>
+          </select>
+        </div>
+        <div class="l-sign">|</div>
+        <div class="search">
+          <input type="text" placeholder="Search for products" class="sof">
+        </div>
+        <div class="s-icon">
+          <img src="./images/magnifying-glass.png" width="25px">
+        </div>
+      </div>
+    </div>
+
+    <div class="navigation-container">
+      <div class="nav-container">
+        <div class="browse-container">
+          <img src="./images/menu.png" class="menu-icon">
+          <div class="browse-text">BROWSE CATEGORIES</div>
+          <select name="" id="br-drop" class="br">
+          </select>
+        </div>
+        <div class="browse-list">
+          <div class="br-li-one">HOME</div>
+          <div class="br-li-one">SHOP</div>
+          <div class="br-li-one">BLOG</div>
+          <div class="br-li-one">CONTACT US</div>
+        </div>
+        <div class="browse-end">
+          <div class="br-li-one">LOGIN/REGISTER</div>
+          <img src="./images/image-removebg-preview (4).png" width="140px" height="40px" class="three-icon">
+        </div>
+      </div>
+    </div>
+
+    <div class="container-one">
+      <div class="container-one-left">
+        <div class="verti">
+          <div class="ver-tex">
+            <p class="ver-fo"> TWITTER FACEBOOK INSTAGRAM</p>
+          </div>
+          <div class="scroll">
+            <p class="ver-fo">SCROLL</p>
+          </div>
+          <img src="./images/down-arrow.png" width="20px" class="d-arrow">
+        </div>
+        <div class="horizontal-container-one">
+          <P class="winter">WINTER SALE 50% OFF</P>
+          <img src="./images/design 4 beaut.png" alt="" class="dof">
+          <p class="wint">You Can Have Anything You Want In Life You Dress For It.</p>
+          <button class="all-collection">All Collection</button>
+        </div>
+      </div>
+
+      <div class="container-one-right">
+        <img src="./images/gb pic.png" alt="" class="gb-pic">
+      </div>
+    </div>
+
+    <div class="container-two">
+      <div class="container-two-one">
+        <img src="./images/fashion1.PNG" alt="">
+      </div>
+      <div class="container-two-two">
+        <img src="./images/fashion2.PNG" alt="">
+      </div>
+      <div class="container-two-three">
+        <img src="./images/fashion3.PNG" alt="">
+      </div>
+    </div>
+
+    <div class="container-three">
+      <p class="best-sell">Best Sell Product
+      <p>
+      <div class="seven-button-container">
+        <p class="all-button"><a href="" style="color: white; font-weight: 600;">All</a></p>
+        <p class="casual-button"><a href="" style="color: black; font-weight: 600;">Casual Shirt</a></p>
+        <p class="formal-button"><a href="" style="color: black; font-weight: 600;">Formal Shirt</a></p>
+        <p class="shirt-button"><a href="" style="color: black; font-weight: 600;">T-Shirt</a></p>
+        <p class="hoddi-button"><a href="" style="color: black; font-weight: 600;">Hoddi</a></p>
+        <p class="linde-button"><a href="" style="color: black; font-weight: 600;">Linde Wear</a></p>
+        <p class="pant-button"><a href="" style="color: black; font-weight: 600;">Pant</a></p>
+      </div>
+      <div class="dress-container">
+        <div class="dress-container-top">
+          <div class="dress-one">
+            <img src="./images/black jean1.PNG" alt="">
+            <p class="bjeans">Black Jeans</p>
+            <p class="cash">$150</p>
+          </div>
+          <div class="dress-one">
+            <img src="./images/black jean2.PNG" alt="">
+            <p class="bjeans">Black Jeans</p>
+            <p class="cash">$150</p>
+          </div>
+          <div class="dress-one">
+            <img src="./images/black jean3.PNG" alt="">
+            <p class="bjeans">Black Jeans</p>
+            <p class="cash">$150</p>
+          </div>
+          <div class="dress-one">
+            <img src="./images/black jeans4.PNG" alt="">
+            <p class="bjeans">Black Jeans</p>
+            <p class="cash">$150</p>
+          </div>
+        </div>
+        <div class="dress-container-bottom">
+          <div class="dress-two">
+            <img src="./images/black jean5.PNG" alt="">
+            <p class="bjeans">Black Jeans</p>
+            <p class="cash">$150</p>
+          </div>
+          <div class="dress-two">
+            <img src="./images/black jean6.PNG" alt="">
+            <p class="bjeans">Black Jeans</p>
+            <p class="cash">$150</p>
+          </div>
+          <div class="dress-two">
+            <img src="./images/black jean7.PNG" alt="">
+            <p class="bjeans">Black Jeans</p>
+            <p class="cash">$150</p>
+          </div>
+          <div class="dress-two">
+            <img src="./images/black jean8.PNG" alt="">
+            <p class="bjeans">Black Jeans</p>
+            <p class="cash">$150</p>
+          </div>
+        </div>
+        <button class="load-more">Load More</button>
+      </div>
+    </div>
+
+    <hr class="third-line">
+
+    <div class="container-four">
+      <div class="cofo-inner">
+        <div class="inner-top">
+          <div class="cofo">
+            <img src="./images/free-delivery.png" width="80px">
+            <p class="cofo-text">FREE SHIPPING</p>
+            <img src="./images/sparkle.png" width="15px">
+          </div>
+          <div class="inner-top-text">
+            <p class="enjoy">ENJOY FREE SHIPPING ON ALL ORDER - NO MINIMUM PURCHASE REQUIRED.</p>
+          </div>
+        </div>
+
+        <div class="inner-top">
+          <div class="cofo">
+            <img src="./images/24-hours-support.png" width="80px">
+            <p class="cofo-text">24/7 SUPPORT</p>
+            <img src="./images/sparkle.png" width="15px">
+          </div>
+          <div class="inner-top-text">
+            <p class="enjoy">OUR TEAM IS AVAILABLE 24/7 TO HELP WITH ANY QUESTIONS OR CONCERNS.</p>
+          </div>
+        </div>
+
+        <div class="inner-top">
+          <div class="cofo">
+            <img src="./images/cashback.png" width="80px">
+            <p class="cofo-text">MONEY BACK</p>
+            <img src="./images/sparkle.png" width="15px">
+          </div>
+          <div class="inner-top-text">
+            <p class="enjoy">WE OFFER A 100% MONEY-BACK GUARANTEE FOR YOUR SATISFACTION.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="cont-four-one">
+        <div class="cont-four-left">
+          <img src="./images/f13.PNG" alt="">
+        </div>
+        <div class="cont-four-right">
+          <p class="sale-event">SALE EVENT</p>
+          <strong class="winter-pdt">Winter Product</strong>
+          <strong class="limited-offer">Limited offer- $25</strong>
+          <p class="until">Until 12/12/23. use code WFESTIVE at checkout</p>
+          <button class="shop-now">Shop Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-five">
+      <div class="container-five-one">
+        <p class="cus-rev">Customers Reviews</p>
+        <p class="as-wom">"As Women Who Value Our Health, We're Here To Do Best - Roll</p>
+        <p class="up-sle">Up Our Sleeves To Get it Done Right."</p>
+        <p class="alisha">Alisha Jico</p>
+        <img src="./images/more.png" width="70px" class="more">
+      </div>
+      <div class="container-five-two">
+        <p class="ig-sep">Instagram With #September</p>
+        <div class="cont-five-inner">
+          <div class="container-five-left">
+            <img src="./images/fashion6.PNG" alt="">
+          </div>
+          <div class="container-five-right">
+            <div class="container-five-right-top">
+              <div class="rt-one"><img src="./images/f7.PNG" alt=""></div>
+              <div class="rt-one"><img src="./images/f8.PNG" alt=""></div>
+              <div class="rt-one"><img src="./images/f9.PNG" alt=""></div>
+            </div>
+            <div class="container-five-right-bottom">
+              <div class="rt-one"><img src="./images/f10.PNG" alt=""></div>
+              <div class="rt-one"><img src="./images/f11.PNG" alt=""></div>
+              <div class="rt-one"><img src="./images/f12.PNG" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-six">
+      <div class="container-six-top">
+        <div class="container-sixtop-left">
+          <p class="about-shop">About Shop</p>
+          <p class="lorem">Lorem Ipsum Dolor Sit Amet, Consectetur</p>
+          <p class="elit">Adipisicing Elit. Read More.</p>
+          <p class="uxper">E.Hello@Uxper.Co</p>
+          <p class="uxper-num">T.(00) 342 489 33</p>
+        </div>
+        <div class="container-sixtop-right">
+          <div class="sixtop-right-one">
+            <p class="about-shop">Company</p>
+            <ul>
+              <li>About Us</li>
+              <li>Careers</li>
+              <li>Store Locator</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+          <div class="sixtop-right-one">
+            <p class="about-shop">Customer Care</p>
+            <ul>
+              <li>Size Guide</li>
+              <li>Help & FAQs</li>
+              <li>Return My Order</li>
+              <li>Refer A Friend</li>
+            </ul>
+          </div>
+          <div class="sixtop-right-one">
+            <p class="about-shop">Terms & Policies</p>
+            <ul>
+              <li>Duties & Taxes</li>
+              <li>Shipping Info</li>
+              <li>Privacy Policy</li>
+              <li>Terms Conditions</li>
+            </ul>
+          </div>
+          <div class="sixtop-right-one">
+            <p class="about-shop">Follow Us</p>
+            <ul>
+              <li>Instagram</li>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Tiktok</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr style="width: 100%; color:white">
+      <div class="container-six-bottom">
+        <div class="sixbottom-left">
+          <p style="margin-top: 30px;">@ 2023 Shishir&Brothers. All Rights Reserved.</p>
+        </div>
+        <div class="sixbottom-right">
+          <img src="./images/Capture.PNG" alt="" class="final">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>]
